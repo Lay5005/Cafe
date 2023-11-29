@@ -1,0 +1,181 @@
+:root{
+    --bgcolor-page:#eddcc1;
+    --bgcolor-1:#fff;
+    --bgcolor-2:#202728;
+    --color-1:#b35905;
+    --color-2:#e5ae66;
+    --text-color-1:#000;
+
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: var(--bgcolor-page);
+    color: var(--text-color-1);
+    margin: 0px;
+}
+a{
+    color: #000;
+    text-decoration: none;
+}
+.actual{
+    font-weight: bold;
+}
+header{
+    background: var(--bgcolor-1);
+    padding: 1em;
+}
+
+header h1 > a > span{
+    color: var(--color-1);
+}
+header h1 > a{
+    word-spacing: -0.4rem;
+}
+header h1{
+    font-size: 1.3rem;
+    margin-top: 0px;
+}
+.boton-invertido{
+    color: var(--color-1);
+    background: var(--bgcolor-1);
+    border: 3px solid var(--color-1);
+    border-radius: 5em;
+    font-weight: bold;
+    padding: .2em 0.8em;
+}
+.boton-invertido:hover{
+    background: var(--color-1);
+    color: var(--bgcolor-1);
+}
+header ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+header ul{
+    display: flex;
+    place-content: space-between;
+}
+header div.contenedor{
+    display: flex;
+    place-content: space-between;
+}
+div.contenedor{
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+header a{
+    padding: 1em;
+}
+
+@media only screen and (max-width:1025px){
+    header{
+        padding: 1em;
+    }
+    header div.contenedor, header div.contenedor ul, header div.contenedor ul li{
+        display: inline;
+    }
+}
+@media only screen and (max-width:768px){
+    header div.contenedor ul{
+        display: none;
+    }
+}
+
+header div.contenedor{
+    place-content: flex-start;
+}
+header div.contenedor nav{
+    width: 70%;
+    display: flex;
+    place-content: space-between;
+}
+#menu, #menu-check{
+    display: none;
+}
+@media only screen and (max-width:1025px){
+    header div.contenedor, header div.contenedor ul, header div.contenedor ul li{
+        display: inline;
+    }
+    header div.contenedor nav{
+        width: 100%;
+        display: inline;
+    }
+}
+@media only screen and (max-width:768px){
+    header h1{
+        margin: 0;
+    }
+    header h1 a{
+        padding: 0;
+    }
+    header div.contenedor ul{
+        display: flex;
+        place-content: space-between;
+    }
+    header div.contenedor nav{
+        display: none;
+    }
+    header div.contenedor nav.visible{
+        display: block;
+    }
+    #menu{
+        display: block;
+        color: var(--color-1);
+        background-color: var(--bgcolor-1);
+        font-size: 1.2em;
+        font-weight: bold;
+        border: 3px solid var(--color-1);
+        border-radius: 0.3em;
+        position: absolute;
+        right: 0.5em;
+        top: 0.5em;
+        z-index: 9998;
+    }
+    #menu:hover{
+        color: #fff;
+        background: var(--color-1);
+    }
+    #menu-cerrar{
+        display: none;
+    }
+    #menu.salir #menu-abrir{
+        display: none;
+    }
+    #menu.salir #menu-cerrar{
+        display: block;
+    }
+    
+    #menu-check:checked ~ label #menu-cerrar{
+        display: block;
+    }
+    header div.contenedor nav{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        background-color: var(--bgcolor-2);
+        padding-top: 0.5em;
+        padding-right: 1.5rem;
+        opacity: 0.8;
+        color: white;
+        font-size: 1.5em;
+    }
+    header div.contenedor nav ul a{
+        color: white;
+        background: none;
+    }
+    header div.contenedor nav ul, header div.contenedor nav ul li{
+        display: block;
+        text-align: right;
+    }
+    header div.contenedor nav .boton-invertido{
+        border: 0;
+        border-radius: 0;
+    }
+    header div.contenedor nav .boton-invertido:hover{
+        background: none;
+        color: white;
+    }
+}

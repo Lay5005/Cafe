@@ -1,0 +1,211 @@
+body{
+    margin: 0px;
+    background: #331f10;
+}
+h1{
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+}
+.img2 img {
+    width: 200px;
+    height: 400px;
+    display: block;
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+.total {
+    background: #936a4a;
+    margin: 0 50px 150px;
+    border-radius: 50px;
+    border: 15px solid #775d4b;
+}
+
+.div1 img {
+    height: 250px;
+    width: 98%;
+    margin: 20px auto; /* Centra la imagen horizontalmente */
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.padre {
+    display: flex;
+    flex-direction: row;
+    margin: 20px auto; /* Centra el contenido horizontalmente */
+}
+
+.div2 {
+    height: 700px;
+    width: 75%;
+    padding-right: 20px;
+    border-radius: 50px;
+}
+
+.hijo1 {
+    color: white;
+    background: #3e240a;
+    margin: 30px;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    font-family: cursive;
+    padding: 10px;
+}
+
+.div2 p {
+    padding-left: 30px;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    font-family: cursive;
+}
+
+.div2 img {
+    height: 300px;
+    width: 300px;
+    padding-left: 30px;
+}
+
+.nieto {
+    display: flex;
+    flex-direction: row;
+    margin: 20px auto; /* Centra el contenido horizontalmente */
+}
+
+.div3 {
+    background: #f5c697;
+    width: 25%;
+    border-radius: 50px;
+    border: 15px solid #775d4b;
+    height: 500px;
+    margin-top: 23px;
+}
+
+.div3 p {
+    padding: 15px;
+    font-weight: bolder;
+    font-size: 1.1rem;
+    font-family: cursive;
+}
+
+.p1 {
+    color: #463320;
+}
+
+.p3 {
+    color: #1e1209;
+}
+
+.pie {
+    display: flex;
+    margin: -250px 100px 50px;
+    justify-content: space-around;
+}
+
+.pie img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 15px solid #775d4b;
+}
+
+/* Reglas de medios para 1025px */
+@media only screen and (max-width: 1025px) {
+    .total {
+        margin: 0 30px 100px;
+    }
+
+    .div2 {
+        width: 80%;
+    }
+    .div2 p {
+        padding-left: 30px;
+        font-weight: bolder;
+        font-size: 1.2rem;
+        font-family: cursive;
+    }
+    
+
+    .div3 {
+        width: 30%;
+    }
+    .div3 p {
+        padding: 15px;
+        font-weight: bolder;
+        font-size: 0.9rem;
+        font-family: cursive;
+    }
+    
+    .pie img {
+        width: 120px;
+        height: 120px;
+    }
+    .pie {
+        margin: -185px 100px 50px;
+        justify-content: space-around;
+    }
+    
+}
+
+/* Reglas de medios para 768px */
+@media only screen and (max-width: 768px) {
+    .total {
+        margin: 0 15px 200px;
+    }
+    .div1 img {
+        margin: 20px auto; /* Centra la imagen horizontalmente */
+    }
+    
+
+    .div3 {
+        width: 100%;
+    }
+
+    .div2 {
+        padding-right: 10px;
+    }
+    .padre {
+        flex-direction: column;/* Centra el contenido horizontalmente */
+    }
+
+    .nieto {
+        flex-direction: column;
+    }
+
+    .pie {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pie img {
+        margin-top: 10px;
+    }
+    .div2 {
+        width: 100%;
+    }
+    
+    .hijo1 {
+        margin: 30px;
+        font-size: 1.3rem;
+    }
+    
+    .div2 p {
+        padding-left: 30px;
+        font-size: 1.2rem;
+    }
+    .div3 {
+        background: #f5c697;
+        width: 80%;
+        border-radius: 50px;
+        border: 15px solid #775d4b;
+        height: 470px;
+        margin: auto;
+        margin-top: 70px;
+    }
+    
+    .div3 p {
+        padding: 15px;
+        font-size: 1.2rem;
+    }
+}
